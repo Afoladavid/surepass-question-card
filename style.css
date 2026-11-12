@@ -1,0 +1,206 @@
+:root {
+    --bg: #f1f5f9;
+    --panel: #ffffff;
+    --fg: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --input: #f8fafc;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+}
+
+.fld {
+    width: 100%;
+    background: var(--input);
+    color: var(--fg);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 9px 12px;
+    font-size: 14px;
+    outline: none;
+}
+
+.fld:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, .2);
+}
+
+.lbl {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+    margin: 0 0 4px;
+    letter-spacing: .02em;
+}
+
+
+/* =====================================================
+   QUESTION-OF-THE-DAY CARD  (1080 x 1920)
+   Dynamic values come from CSS variables set in app.js:
+   --accent, --accent-0 (transparent accent), --qs (question size), --os (option size)
+   ===================================================== */
+.sp-card {
+    width: 1080px;
+    height: 1920px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    color: #0f2a5c;
+    font-family: Poppins, Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* everything above the footer, centred as ONE group so no big gaps */
+.sp-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sp-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sp-logo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.sp-logo img {
+    width: 132px;
+    height: 132px;
+    object-fit: contain;
+}
+
+.sp-title {
+    margin-top: 26px;
+    padding: 0 80px;
+    font-family: Poppins, Inter, system-ui, "Segoe UI", Arial, sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 1.25;
+    margin-bottom: 5px;
+}
+
+/* course code pill: the text is an image, so it is always perfectly centred */
+.sp-pill {
+    margin-top: 28px;
+    padding: 16px 56px;
+    border-radius: 60px;
+    background: var(--accent);
+    line-height: 0;
+}
+
+.sp-pill img {
+    display: block;
+}
+
+.sp-topic {
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: 500;
+    opacity: .85;
+    text-align: center;
+}
+
+.sp-rule {
+    height: 5px;
+    border-radius: 5px;
+    margin: 0 auto;
+    background: linear-gradient(90deg, var(--accent-0) 0%, var(--accent) 50%, var(--accent-0) 100%);
+}
+
+.sp-rule-sm {
+    width: 360px;
+    margin-top: 18px;
+}
+
+.sp-rule-lg {
+    width: 520px;
+    margin-top: 20px;
+}
+
+.sp-qotd {
+    margin-top: 36px;
+    text-align: center;
+}
+
+.sp-qotd-title {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--accent);
+}
+
+.sp-question {
+    margin-top: 30px;
+    padding: 0 100px;
+    font-size: var(--qs);
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.sp-opts {
+    margin-top: 36px;
+    padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sp-opt {
+    display: flex;
+    align-items: flex-start;
+    font-size: var(--os);
+    line-height: 1.4;
+}
+
+.sp-opt-l {
+    width: 80px;
+    flex-shrink: 0;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+.sp-opt-t {
+    flex: 1;
+    font-weight: 500;
+}
+
+.sp-foot {
+    flex-shrink: 0;
+    background: linear-gradient(90deg, #0b1f4d 0%, #0f4c75 100%);
+    color: #fff;
+    padding: 40px 60px 48px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.45;
+}
